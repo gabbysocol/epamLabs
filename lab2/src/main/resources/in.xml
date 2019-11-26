@@ -1,0 +1,92 @@
+<DataBaseObject>
+   <Clients>
+      <Client>
+         <clientId>1</clientId>
+         <name>Ira</name>
+         <surname>Lop</surname>
+         <bankAccount>12.0</bankAccount>
+         <tariffPlanId>1</tariffPlanId>
+         <companyId>1</companyId>
+         <activeClient>true</activeClient>
+      </Client>
+      <Client>
+         <clientId>2</clientId>
+         <name>Ira2</name>
+         <surname>Lul1</surname>
+         <bankAccount>32.0</bankAccount>
+         <tariffPlanId>1</tariffPlanId>
+         <companyId>2</companyId>
+         <activeClient>true</activeClient>
+      </Client>
+      <Client>
+         <clientId>3</clientId>
+         <name>Nina</name>
+         <surname>Dub</surname>
+         <bankAccount>123.0</bankAccount>
+         <tariffPlanId>2</tariffPlanId>
+         <companyId>1</companyId>
+         <activeClient>true</activeClient>
+      </Client>
+   </Clients>
+   <Calls>
+      <Call >
+         <serviceId>1</serviceId>
+         <sourceClientId>1</sourceClientId>
+         <destinationClientId>2</destinationClientId>
+         <dateTime>2019-11-14 22:23:00</dateTime>
+         <duration>03:00:00</duration>
+      </Call>
+   </Calls>
+   <TariffPlans>
+      <TariffPlan >
+         <id>1</id>
+         <name>Lemon</name>
+         <subscriptionFee>3.2</subscriptionFee>
+         <debit>everyDay</debit>
+         <smsPrice>2.1</smsPrice>
+         <callPrice>3.2</callPrice>
+      </TariffPlan>
+      <TariffPlan >
+         <id>2</id>
+         <name>Lemon1</name>
+         <subscriptionFee>3.4</subscriptionFee>
+         <debit>everyDay</debit>
+         <smsPrice>2.1</smsPrice>
+         <callPrice>3.2</callPrice>
+      </TariffPlan>
+      <TariffPlan >
+         <id>3</id>
+         <name>Lemon3</name>
+         <subscriptionFee>3.1</subscriptionFee>
+         <debit>everyWeek</debit>
+         <smsPrice>2.9</smsPrice>
+         <callPrice>3.2</callPrice>
+      </TariffPlan>
+   </TariffPlans>
+   <SMSes>
+      <SMS >
+         <serviceId>1</serviceId>
+         <sourceClientId>1</sourceClientId>
+         <destinationClientId>2</destinationClientId>
+         <dateTime>2019-11-14 22:23:00</dateTime>
+         <textSize>123</textSize>
+      </SMS>
+   </SMSes>
+   <Companies>
+      <Company >
+         <companyId>1</companyId>
+         <name>MIT</name>
+         <discount>0.4</discount>
+      </Company>
+      <Company>
+         <companyId>3</companyId>
+         <name>MIT1</name>
+         <discount>0.2</discount>
+      </Company>
+      <Company >
+         <companyId>2</companyId>
+         <name>MIT2</name>
+         <discount>0.1</discount>
+      </Company>
+   </Companies>
+</DataBaseObject>

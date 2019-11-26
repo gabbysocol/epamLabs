@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="DataBaseObject">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element name="Clients" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="Client" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="clientId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="name" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="surname" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="bankAccount" minOccurs="0" type="xsd:decimal"/>
+                                        <xsd:element name="tariffPlanId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="companyId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="activeClient" minOccurs="0" type="xsd:boolean"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Calls" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="Call" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="serviceId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="sourceClientId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="destinationClientId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="dateTime" minOccurs="0" type="xsd:string"/>
+                                        <xsd:element name="duration" minOccurs="0" type="xsd:normalizedString"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="TariffPlans" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="TariffPlan" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="id" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="name" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="subscriptionFee" minOccurs="0" type="xsd:decimal"/>
+                                        <xsd:element name="debit" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="smsPrice" minOccurs="0" type="xsd:decimal"/>
+                                        <xsd:element name="callPrice" minOccurs="0" type="xsd:decimal"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="SMSes" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="SMS" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="serviceId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="sourceClientId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="destinationClientId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="dateTime" minOccurs="0" type="xsd:string"/>
+                                        <xsd:element name="textSize" minOccurs="0" type="xsd:int"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Companies" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="Company" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="companyId" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="name" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="discount" minOccurs="0" type="xsd:decimal"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
